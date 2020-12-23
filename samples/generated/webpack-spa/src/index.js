@@ -213,9 +213,10 @@ function showSigninWidget() {
         state: JSON.stringify(config.state),
       },
       idps: config.idps.split(/\s+/).map(v => {
-        const parts = v.split(/\:/);
-        if (parts.length == 2)
+        const parts = v.split(/:/);
+        if (parts.length == 2) {
           return {type: parts[0], id: parts[1]};
+        }
         return null;
       }).filter(v => v)
     });
