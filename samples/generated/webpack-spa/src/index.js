@@ -426,7 +426,7 @@ function loadConfig() {
     flow,
     scopes,
     idps,
-  }).map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join("&");
+  }).map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join('&');
 
   
   // Add all app options to the state, to preserve config across redirects
